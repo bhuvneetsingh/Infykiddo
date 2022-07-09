@@ -1,0 +1,26 @@
+<app-sidebar></app-sidebar>
+<app-nav></app-nav>
+<div class="container2 main">
+  
+  <img class="size-banner" src="./assets/img/Lorem.png" alt="banner" />
+  
+  <h2 class="text"> Learning Resources</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let Course of Courses">
+      <div class="card card1">
+        <div>
+          <h2> {{Course.cname}}</h2>
+          <img class="size-images" src="./assets/img/1.png" alt="course1" />
+        </div>
+        <div>
+          <p>
+            {{Course.cdesc}}
+            <br />
+            <button (click)="view(Course)" align="left" >View More>></button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

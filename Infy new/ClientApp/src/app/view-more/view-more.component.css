@@ -1,0 +1,25 @@
+.bg-color {
+  background-color: #D8B6A4;
+  padding: 15px;
+}
+
+.main{
+    margin-top:95px;
+    margin-left:110px;
+}
+
+.spacing {
+  padding: 40px 0;
+}
+
+.trainer-image {
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+}
+
+.align-text {
+  text-align: justify;
+  padding: 30px;
+  font-size: large;
+}

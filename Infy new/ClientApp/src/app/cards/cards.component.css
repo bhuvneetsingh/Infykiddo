@@ -1,0 +1,140 @@
+
+body {
+  height: 100vh;
+  justify-content: center;
+  background: #222;
+}
+
+.maincontainer {
+  display: flex;
+  margin: 50px;
+}
+
+.card1 {
+  height: 340px;
+  width: 340px;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+  margin-top:60px;
+}
+
+.card2 {
+  height: 340px;
+  width: 340px;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+  margin: 65px;
+}
+
+.card3 {
+  height: 340px;
+  width: 340px;
+  transition: all 1s linear;
+  transform-style: preserve-3d;
+  margin: 65px;
+}
+
+.front1,
+.back1 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-family: 'Lobster',Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.front2,
+.back2 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-family: 'Lobster',Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.front3,
+.back3 {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  font-family: 'Lobster',Arial, Helvetica, sans-serif;
+  border-radius: 10px;
+  position: absolute;
+}
+
+.front1 {
+  background: linear-gradient(#808080, #808080);
+  z-index: 2;
+  backface-visibility: hidden;
+  background-image: url("../../assets/img/h7.jpg");
+  background-size: 340px 340px;
+}
+
+.front2 {
+  background: linear-gradient(#808080, #808080);
+  z-index: 2;
+  backface-visibility: hidden;
+  background-image: url("../../assets/img/h9.jpeg");
+  background-size: 340px 340px;
+}
+
+.front3 {
+  background: linear-gradient(#808080, #808080);
+  z-index: 2;
+  backface-visibility: hidden;
+  background-image: url("../../assets/img/h5.jpg");
+  background-size: 340px 340px;
+}
+
+.back1 {
+  background: linear-gradient(#808080, #808080);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.back2 {
+  background: linear-gradient(#808080, #808080);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.back3 {
+  background: linear-gradient(#808080, #808080);
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+
+.container1:hover .card1 {
+  transform: rotateY(180deg);
+}
+
+.container2:hover .card2 {
+  transform: rotateY(180deg);
+}
+
+.container3:hover .card3 {
+  transform: rotateY(180deg);
+}
+
+.container1 {
+  perspective: 1000px;
+}
+
+.container2 {
+  perspective: 1000px;
+}
+
+.container3 {
+  perspective: 1000px;
+}

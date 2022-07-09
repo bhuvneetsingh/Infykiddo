@@ -1,0 +1,68 @@
+<app-tsidebar></app-tsidebar>
+<app-nav></app-nav>
+<body>
+  <div class="ScriptTop">
+    <div class="rt-container">
+      <div class="col-rt-4" id="float-right">
+      </div>
+    </div>
+  </div>
+
+
+
+  <section>
+
+    <div class="student-profile py-4">
+      <div class="container" *ngFor="let trainer of Trainers">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card shadow-sm">
+              <div class="card-header bg-transparent ">
+                <h2>My Profile</h2>
+                <br />
+                <h4>User id:T{{trainer.trainerId}} <a routerLink="edit profile" class="btn btn-lg btn-primary">Edit Profile</a></h4>
+                <h4>User Name:{{trainer.tname}}</h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+       
+
+
+        <div style="height: 25px"></div>
+        <div class="card shadow-sm">
+          <div class="card-header bg-transparent border-0">
+            <h3 class="mb-0"><i class="far fa-clone pr-1"></i> User Information</h3>
+          </div>
+
+          <div class="col-lg-8">
+
+          </div>
+          <div class="card-body pt-0">
+            <table class="table table-bordered">
+              <tr>
+                <th width="30%">Contact</th>
+                <td width="2%">:</td>
+                <td>{{trainer.cnum}}</td>
+
+              </tr>
+
+
+              <tr>
+                <th width="30%">Email-Id	</th>
+                <td width="2%">:</td>
+                <td>{{trainer.email}}</td>
+
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+</body>
+<app-footer></app-footer>

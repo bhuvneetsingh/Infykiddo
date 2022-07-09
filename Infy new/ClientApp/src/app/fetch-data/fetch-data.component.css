@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.register {
+  background-color: white;
+  width: 450px;
+  height: 320px;
+  align-items: center;
+  margin-top: 150px;
+  box-shadow: 8px 8px 8px 8px;
+  align-content: center;
+}
+
+
+.parent {
+  margin-left: 148px;
+}
+
+.trainer {
+  margin: 70px 20px;
+}

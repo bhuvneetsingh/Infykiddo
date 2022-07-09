@@ -1,0 +1,34 @@
+<!--References https://onlinecourses.nptel.ac.in/noc21_hs66/course -->
+<app-sidebar></app-sidebar>
+<app-nav></app-nav>
+<div class="container main" *ngFor="let Course of Courses">
+  <div class="bg-color">
+    <div class="row">
+
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <h1>
+          {{Course.cname}}
+        </h1>
+        <p>
+          {{Course.cdesc}}
+        </p>
+
+        <div>
+          <b>INTENDED AUDIENCE:</b>
+          {{Course.minAge}} to {{Course.maxAge}}
+        </div>
+        <div>
+          <b>PREREQUISITES:  </b>
+          {{Course.preReq}}
+        </div>
+        <button (click)="Enroll(Course)">Enroll </button>
+      </div>
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <img src="./assets/img/2.png" alt="course-thumbnail" />
+
+      </div>
+    </div>
+  </div>
+  <br />
+</div>
+<app-footer></app-footer>

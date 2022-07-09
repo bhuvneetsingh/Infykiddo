@@ -1,0 +1,50 @@
+
+<body>
+  <app-nav></app-nav>
+  
+  
+    <div class="content-2">
+      <div style=" text-align:center;">
+        <div class="courses">
+          <div class="title">
+            <h2>Courses</h2>
+          </div>
+          <div class="table-responsive">
+            <table class="table" style="border:5px solid rgba(220,230,242,1);">
+
+              <tr>
+                <th>CourseId</th>
+                <th>TrainerId</th>
+                <th>Cname</th>
+                <th>MinAge</th>
+                <th>MaxAge</th>
+                <th>Cdur</th>
+                <th>PreReq</th>
+                <th>Cdesc</th>
+                <th>Approve</th>
+              </tr>
+              <tr *ngFor="let Course of Courses">
+                <td>{{Course.courseId }}</td>
+                <td>{{Course.trainerId }}</td>
+                <td>{{Course.cname}}</td>
+                <td>{{Course.minAge}}</td>
+                <td>{{Course.maxAge}}</td>
+                <td>{{Course.cdur}}</td>
+                <td>{{Course.preReq}}</td>
+                <td>{{Course.cdesc}}</td>               
+                <td>
+                  <button type="button" (click)="Update(Course)">Yes</button>
+                  <button type="button" (click)="Delete(Course)">No</button>
+                </td>
+              </tr>
+
+            </table>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  
+</body>
+<app-footer></app-footer>

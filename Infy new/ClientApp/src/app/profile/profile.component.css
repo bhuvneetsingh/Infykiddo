@@ -1,0 +1,66 @@
+body {
+  background: #67B26F; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ff0000, #67B26F); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ccc, #ccc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 0;
+  margin-left: 200px;
+  font-family: 'Lato', sans-serif;
+  color: #000;
+  margin-top:95px;
+  margin-bottom:20px;
+}
+
+.student-profile .card {
+  border-radius: 10px;
+  margin-left:35px;
+  width: 1000px;
+  margin-bottom: 40px;
+  align-self:center;
+}
+
+
+.student-profile .card h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.student-profile .card h4 {
+    font-size: 25px;
+    font-weight: 700;
+    
+}
+
+.student-profile .card a {
+    font-size: 20px;
+    font-weight: 400;
+    float: right;
+}
+
+.student-profile .card p {
+    font-size: 16px;
+    color: #000;
+}
+
+.student-profile.container .card1 {
+  margin: 100px;
+}
+
+.student-profile .table th,
+.student-profile .table td {
+  font-size: 18px;
+  padding: 5px 20px;
+  color: #000;
+  border-radius: 50%;
+}
+
+input,
+label {
+  margin: .4rem 0;
+}
+
+details {
+  display: block;
+}
+
+@media screen and (max-width:536px) {
+}

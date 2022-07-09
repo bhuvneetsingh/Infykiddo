@@ -1,0 +1,28 @@
+<app-tsidebar></app-tsidebar>
+<app-nav></app-nav>
+<div class="container2 main">
+
+  <img class="size-banner" src="./assets/img/trainer.png" alt="banner" />
+  <h2 class="text">
+    My Courses
+    <button class="btn-primary add" [routerLink]="['/AddNewCourse']">Add New Course</button>
+  </h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let Course of Courses">
+      <div class="card card1">
+        <div>
+          <h2> {{Course.cname}}</h2>
+          <img class="size-images" src="./assets/img/1.png" alt="course1" />
+        </div>
+        <div>
+          <p>
+            {{Course.cdesc}}
+            <br />
+            <a [routerLink]="['/ViewMore']" align="Center">View More>></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> 
+<app-footer></app-footer>

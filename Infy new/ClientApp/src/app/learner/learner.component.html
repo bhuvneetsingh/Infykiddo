@@ -1,0 +1,29 @@
+<!--HTML LEARNER PAGE-->
+<app-nav></app-nav>
+<app-sidebar></app-sidebar>
+<div class="container2 main">
+
+  <img class="size-banner" src="./assets/img/L0.jpeg" alt="banner" />
+  <h2 class="text"> Ongoing Courses</h2>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let Course of Courses">
+      <div class="card card1">
+        <div>
+          <h2> {{Course.cname}}</h2>
+          <img class="size-images" src="./assets/img/L1.jpeg" alt="course1" />
+        </div>
+        <div>
+          <p>
+            {{Course.cdesc}}
+            <a href=" https://localhost:5001/playlist"align="left"> Start Learning>></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>
+
+
+
+

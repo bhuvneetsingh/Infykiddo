@@ -1,0 +1,30 @@
+<div class="container main">
+  <div style="text-align:center;">
+  <h1>View Users</h1>
+  <div class="table-responsive">
+    <table class="table" style="border:5px solid rgba(220,230,242,1);" *ngIf="products">
+      <tr style="background-color:rgba(220,230,242,1); font-size:12pt">
+        <th>User Id</th>
+        <th>Email</th>
+        <th>Pname</th>
+        <th>Lname</th>
+        <th>Lage</th>
+        <th>Password</th>
+      </tr>
+      <tr *ngFor="let product of products" style="background-color:white; font-size:10pt">
+        <td>{{product.userId }}</td>
+        <td>{{product.email }}</td>
+        <td>{{product.pname}}</td>
+        <td>{{product.lname}}</td>
+        <td>{{product.lage}}</td>
+        <td>{{product.password}}</td>
+      </tr>
+      <tr *ngFor="let product of products" style="background-color:white">
+      </tr>
+    </table>
+  </div>
+  <div *ngIf="showMsgDiv" style="">
+    <h4 class="jumbotron" style="text-align:center;">No products available</h4>
+  </div>
+</div>
+  </div>

@@ -1,0 +1,104 @@
+<!--References https://infyspringboard.onwingspan.com/web/en/app/toc/lex_31364648044580110000/overview -->
+
+<div class="container register">
+  <form #loginForm="ngForm" (ngSubmit)="submitLoginForm(loginForm)">
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div>
+        <h2 align="center">Parent's Registeration</h2>
+        <h6 style="text-align:right;color:dimgrey;font-size:small">
+          All fields are mandatory
+          <br />
+
+        </h6>
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Parent Name</label>
+          </div>
+          <div class="col; input-group">
+            <input type="text" name="ParentName" #PnameRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="PnameRef.errors && (PnameRef.dirty || PnameRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!PnameRef.errors?.['required']">
+              <p>&nbsp;Parent's Name is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Learner Name</label>
+          </div>
+          <div class="col; input-group">
+            <input type="text" name="LearnerName" #LnameRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="LnameRef.errors && (LnameRef.dirty || LnameRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!LnameRef.errors?.['required']">
+              <p>&nbsp;Learner's Name is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Learner Age</label>
+          </div>
+          <div class="col; input-group">
+            <input type="number" name="LearnerAge" #LAgeRef="ngModel" class="form-control" ngModel required pattern="[1-9]+">
+          </div>
+          <div *ngIf="LAgeRef.errors && (LAgeRef.dirty || LAgeRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!LAgeRef.errors?.['required']">
+              <p>&nbsp;Learner's Age is mandatory</p>
+            </div>
+            <div [hidden]="!LAgeRef.errors?.['pattern']">
+              <p>&nbsp;Learner Age is not entered in proper format</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Email Id</label>
+          </div>
+          <div class="col; input-group">
+            <input type="email" name="email" #emailRef="ngModel" class="form-control" ngModel required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+          </div>
+          <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!emailRef.errors?.['required']">
+              <p>&nbsp;Email id is mandatory</p>
+            </div>
+            <div [hidden]="!emailRef.errors?.['pattern']">
+              <p>&nbsp;Email id is not entered in proper format</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Password</label>
+          </div>
+          <div class="col; input-group">
+            <input type="password" name="password" #passwordRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!passwordRef.errors?.['required']">
+              <p>&nbsp;Password is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group" style="text-align:center">
+          <button type="submit" [disabled]="!loginForm.form.valid" class="btn btn-dark">Register</button>
+        </div>
+        <a [routerLink]="['/fetch-data']">Already have an account? Login Here</a>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+    <div *ngIf="showDiv" style="color:red;text-align:center;">
+      <br />
+      {{msg}}
+    </div>
+  </form>
+</div>

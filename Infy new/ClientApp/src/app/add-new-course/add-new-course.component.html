@@ -1,0 +1,110 @@
+<div class="container register">
+  <form #AddNew="ngForm" (ngSubmit)="submitNewCourse(AddNew)">
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div>
+        <h2 align="center">Add New Course</h2>
+        <h6 style="text-align:right;color:dimgrey;font-size:small">All fields are mandatory</h6>
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Course Name</label>
+          </div>
+          <div class="col; input-group">
+            <input type="text" name="CourseName" #CnameRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="CnameRef.errors && (CnameRef.dirty || CnameRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!CnameRef.errors?.['required']">
+              <p>&nbsp;Course Name is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Intended Audience</label>
+          </div>
+          <br />
+          <div class="row">
+          <div class="col" style="text-align:left">
+            <label>Min Age</label>
+          </div>
+          <div class="col">
+            <input type="number" name="MinAge" #MinRef="ngModel" class="form-control" ngModel required pattern="[1-9]">
+          </div>
+          <div *ngIf="MinRef.errors && (MinRef.dirty || MinRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!MinRef.errors?.['required']">
+              <p>&nbsp;Min Age Group is mandatory</p>
+            </div>
+            <div [hidden]="!MinRef.errors?.['pattern']">
+              <p>&nbsp;Min Age Group is invalid</p>
+            </div>
+          </div>
+          <div class="col" style="text-align:left">
+            <label>Max Age</label>
+          </div>
+          <div class="col">
+            <input type="number" name="MaxAge" #MaxRef="ngModel" class="form-control" ngModel required pattern="[1-9]">
+          </div>
+          <div *ngIf="MaxRef.errors && (MaxRef.dirty || MaxRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!MaxRef.errors?.['required']">
+              <p>&nbsp;Max Age Group is mandatory</p>
+            </div>
+            <div [hidden]="!MaxRef.errors?.['pattern']">
+              <p>&nbsp;Max Age Group is invalid</p>
+            </div>
+          </div>
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Course Duration (In Hours)</label>
+          </div>
+          <div class="col; input-group">
+            <input type="number" name="CourseDuration" #CDRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="CDRef.errors && (CDRef.dirty || CDRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!CDRef.errors?.['required']">
+              <p>&nbsp;Course Duration is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Prerequisites</label>
+          </div>
+          <div class="col; input-group">
+            <input type="text" name="Prereq" #PreRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="PreRef.errors && (PreRef.dirty || PreRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!PreRef.errors?.['required']">
+              <p>&nbsp;Prerequisites is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Brief Description About Course</label>
+          </div>
+          <div class="col; input-group">
+            <input type="text" name="Description" #DesRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="DesRef.errors && (DesRef.dirty || DesRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!DesRef.errors?.['required']">
+              <p>&nbsp;Description is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group" style="text-align:center">
+          <button type="submit" [disabled]="!AddNew.form.valid" class="btn btn-dark">Submit</button>
+        </div>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </form>
+</div>

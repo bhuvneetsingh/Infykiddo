@@ -1,0 +1,80 @@
+<div class="container register">
+  <form #loginForm="ngForm" (ngSubmit)="submitLoginForm(loginForm)">
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div>
+        <h2 align="center">Trainer's Registeration</h2>
+        <h6 style="text-align:right;color:dimgrey;font-size:small">All fields are mandatory</h6>
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Full Name</label>
+          </div>
+          <div class="col; input-group">
+            <input type="text" name="FullName" #NameRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="NameRef.errors && (NameRef.dirty || NameRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!NameRef.errors?.['required']">
+              <p>&nbsp; Full Name is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Contact Number</label>
+          </div>
+          <div class="col; input-group">
+            <input type="text" name="ContactNumber" #CnumRef="ngModel" class="form-control" ngModel required pattern="[789][0-9]{9}">
+          </div>
+          <div *ngIf="CnumRef.errors && (CnumRef.dirty || CnumRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!CnumRef.errors?.['required']">
+              <p>&nbsp;Contact Number is mandatory</p>
+            </div>
+            <div [hidden]="!CnumRef.errors?.['pattern']">
+              <p>&nbsp;Contact Number is not entered in proper format</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Email Id</label>
+          </div>
+          <div class="col; input-group">
+            <input type="email" name="email" #emailRef="ngModel" class="form-control" ngModel required pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$">
+          </div>
+          <div *ngIf="emailRef.errors && (emailRef.dirty || emailRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!emailRef.errors?.['required']">
+              <p>&nbsp;Email id is mandatory</p>
+            </div>
+            <div [hidden]="!emailRef.errors?.['pattern']">
+              <p>&nbsp;Email id is not entered in proper format</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Password</label>
+          </div>
+          <div class="col; input-group">
+            <input type="password" name="password" #passwordRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!passwordRef.errors?.['required']">
+              <p>&nbsp;Password is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group" style="text-align:center">
+          <button type="submit" [disabled]="!loginForm.form.valid" class="btn btn-dark">Register</button>
+        </div>
+        <a [routerLink]="['/fetch-data']">Already have an account? Login Here</a>
+      </div>
+      <div class="col-md-4">
+      </div>
+    </div>
+  </form>
+</div>

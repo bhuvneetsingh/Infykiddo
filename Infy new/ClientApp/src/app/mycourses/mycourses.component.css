@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-left:200px;
+  margin-top:95px;
+  margin-bottom:20px;
+  background: rgba(221, 219, 214, 0.925);
+}
+
+.h1 {
+  font-size: large;
+  color: black;
+}
+
+.content {
+  max-width: 1090px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  row-gap: 2em;
+}
+
+.content .card {
+    background: #fff;
+    width: calc(33% - 20px);
+    height: calc(33% - 20px);
+    text-align: center;
+    padding: 15px 15px 30px 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.content .card .top {
+      height: 100px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color: rgb(44, 42, 42);
+      padding: 12px 0 0 0;
+      clip-path: inset(5px);
+}
+
+.content .card .top .title {
+        font-size: 27px;
+        font-weight: 600;
+}
+.content .card .top .price-sec {
+        margin-top: -10px;
+        font-weight: 600;
+}
+
+.content .card .top .price {
+        font-size: 45px;
+}
+
+.content .card .info {
+      font-size: 16px;
+      margin-top: 20px;
+}
+
+.content .card .details .one {
+      margin-top: 25px;
+      font-size: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+}
+
+.content .card .details .one::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        background: #ddd;
+        height: 1px;
+        left: 0;
+        top: -12px;
+        border-radius: 25px;
+}
+
+
+.content .card .details .one i {
+        color: rgb(7, 7, 7);
+
+}
+
+
+.content .card .details i.fa-times {
+      color: hsl(0, 95%, 58%);
+
+}
+
+
+.content .card button {
+      outline: none;
+      border: none;
+      height: 42px;
+      color: #fff;
+      margin-top: 30px;
+      border-radius: 3px;
+      font-size: 18px;
+      width: 100%;
+      display: block;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      letter-spacing: 1px;
+
+}
+
+.content .one .top,
+.content .one button {
+    background: #81cbf7;
+}
+
+.content .two .top,
+.content .two button {
+    background: #f4aff7;
+}
+
+.content .three .top,
+.content .three button {
+    background: #f57ab7;
+}
+
+.content .four .top,
+.content .four button {
+    background: #83f1e3;
+}
+
+.content .five .top,
+.content .five button {
+    background: #d8ee75;
+}
+
+.content .six .top,
+.content .six button {
+    background: #ff9cad;
+}
+
+.content button:hover {
+    filter: brightness(90%);
+}
+
+.content .one ::selection {
+    background: #8af5b6;
+}
+
+.content .two ::selection {
+    background: #f2b08c;
+}
+
+.content .three ::selection {
+    background: #d0f9fb;
+}
+
+@media (max-width:1000px) {
+.content .card {
+    background: #fff;
+    width: calc(50% - 20px);
+    margin-bottom: 30px;
+}
+}
+
+@media (max-width:715px) {
+.content .card {
+    width: 100%;
+ }
+}

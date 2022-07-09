@@ -1,0 +1,54 @@
+<!--References https://infyspringboard.onwingspan.com/web/en/app/toc/lex_31364648044580110000/overview -->
+<div class="container register">
+  <form #loginForm="ngForm" (ngSubmit)="submitLoginForm(loginForm)">
+    <div class="row">
+      <div class="col-md-4">
+      </div>
+      <div>
+        <h2 align="center">Login</h2>
+        <h6 style="text-align:right;color:dimgrey;font-size:small">All fields are mandatory</h6>
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Id</label>
+          </div>
+          <div class="col; input-group">
+            <input type="text" name="id" #idRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="idRef.errors && (idRef.dirty || idRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!idRef.errors?.['required']">
+              <p>&nbsp;Id is mandatory</p>
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <div class="col" style="text-align:left">
+            <label>Password</label>
+          </div>
+          <div class="col; input-group">
+            <input type="password" name="password" #passwordRef="ngModel" class="form-control" ngModel required>
+          </div>
+          <div *ngIf="passwordRef.errors && (passwordRef.dirty || passwordRef.touched)" style="text-align:left; padding-top:5px; color:red;">
+            <div [hidden]="!passwordRef.errors?.['required']">
+              <p>&nbsp;Password is mandatory</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="form-group" style="text-align:center">
+          <button type="submit" [disabled]="!loginForm.form.valid" class="btn btn-dark">Login</button>
+        </div>
+        <div>
+          <a [routerLink]="['/RegisterAs']">Click here to register</a>
+        </div>
+      </div>
+      <div class="col-md-4">
+      </div>
+
+    </div>
+    <div *ngIf="showDiv" style="color:red;text-align:center;">
+      <br />
+      {{msg}}
+    </div>
+  </form>
+</div>

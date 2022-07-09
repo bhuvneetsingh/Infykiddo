@@ -1,0 +1,71 @@
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  top: 75px;
+  left: 0;
+  background-color: #f1f1f1;
+  overflow-x: hidden;
+  margin-bottom: 1000px;
+}
+
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+    display: block;
+}
+
+
+.sidenav a:hover {
+      color: #E2C2B9;
+}
+
+
+
+@media screen and (max-height: 450px) {
+.sidenav {
+    padding-top: 15px;
+}
+
+.sidenav a {
+      font-size: 18px;
+}
+}
+
+.overlay {
+  margin-top: 150px;
+  z-index: 1;
+  margin-left: 200px;
+}
+
+.popup .close {
+  position: absolute;
+  top: 130px;
+  left: 600px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+
+.popup .close:hover {
+    color: #06D85F;
+    cursor: pointer;
+}
+
+.xyz {
+  margin-left: 100px;
+}
+
+.white {
+  color: white;
+  text-decoration: none;
+}
+.white:hover {
+    color: white;
+    text-decoration: none;
+}

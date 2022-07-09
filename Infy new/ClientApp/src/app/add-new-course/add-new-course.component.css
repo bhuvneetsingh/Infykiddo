@@ -1,0 +1,15 @@
+h1 {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.register {
+  background-color: white;
+  width: 750px;
+  height: 570px;
+  align-items: center;
+  margin-top: 150px;
+  box-shadow: 8px 8px 8px 8px;
+  align-content: center;
+  box-sizing:content-box;
+}

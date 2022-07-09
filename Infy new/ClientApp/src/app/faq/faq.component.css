@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=KoHo:wght@200;300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'KoHo','Times New Roman', Times, serif;
+  background-color: lightgray;
+  margin-left: 200px;
+  margin-top:95px;
+  padding-bottom:20px;
+  margin-bottom:20px;
+}
+
+.faq_body, .head {
+  max-width: 600px;
+  margin: auto;
+}
+
+.head {
+  text-align: center;
+  padding: 20px 0px;
+}
+
+.faq_body {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 30px 30px;
+  margin-bottom:30px;
+}
+
+summary {
+  background-color: #f2f2f2;
+  padding: 20px 30px;
+  border-radius: 10px;
+  margin: 15px 0px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+  summary:hover {
+    background-color: #70bfec;
+  }
+
+details[open=""] > summary {
+  background-color: #a3b2b9;
+}
+
+details div {
+  background-color: #ffffff;
+  padding: 0px 30px;
+  padding-left: 0px;
+  border-radius: 10px;
+  line-height: 2;
+  margin-bottom: 40px;
+}
